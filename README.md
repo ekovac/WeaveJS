@@ -17,3 +17,15 @@ If you would like to contribute to Weave, you will first need to contact us at c
 
 #Developer notes
 To debug Open Layers, use the following in _node_modules/openlayers/package.json:  "browser": "dist/ol-debug.js"_,
+
+#Building
+```
+git clone https://github.com/pkovac/WeaveJS.git
+cd WeaveJS
+npm install
+npm run compile
+cd WeaveApp
+npm install
+npm run compile-libs
+npm run compile
+```
