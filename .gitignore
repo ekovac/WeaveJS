@@ -62,3 +62,6 @@ srcts/_references.ts
 # release packages built by build-release-package.sh
 weave-release-*.zip
 tmp/
+
+# build toolchain installed by scripts/bootstrap.sh
+.toolchain/

@@ -2,11 +2,10 @@
 # Builds weave-release-<date>.zip: the Flash client and WeaveServices.war from the Weave
 # submodule, plus WeaveJS (ROOT/weavejs) and the compiled WeaveASJS core (ROOT/weavejs-core).
 #
-# Requirements:
-#   - The FlexJS 0.6.0 SDK and FalconJX compiler installed in node_modules/flexjs, for WeaveJS.
-#   - FLEX_HOME pointing at the Flex 4.5.1 SDK, with ant running on Java 7, for Weave.
+# Run scripts/bootstrap.sh first to install the toolchain.
 set -e
 cd "$(dirname "$0")"
+. "${WEAVE_TOOLCHAIN:-.toolchain}/env.sh"
 
 git submodule update --init Weave
 
