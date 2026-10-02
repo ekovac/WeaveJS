@@ -20,26 +20,17 @@
     "d3/d3.d.ts": {
       "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
     },
-    "react-swf/react-swf.d.ts": {
-      "commit": "4c41545030eba44b27ce7209112dbf862f6b1d78"
-    },
     "react-dom/react-dom.d.ts": {
       "commit": "68548c2daab053869f323d475419c693478bbb73"
     },
     "react/react-dom.d.ts": {
       "commit": "3f97b234196b36a4cc9218e75c6d7e7e01dc8ac1"
     },
-    "swfobject/swfobject.d.ts": {
-      "commit": "dc9dabe74a5be62613b17a3605309783a12ff28a"
-    },
     "jszip/jszip.d.ts": {
       "commit": "dc9dabe74a5be62613b17a3605309783a12ff28a"
     },
     "classnames/classnames.d.ts": {
       "commit": "55c750ace821f85e6643bbdb249dbd0b15a3df78"
-    },
-    "fuse/fuse.d.ts": {
-      "commit": "6766ed1d0faf02ede9e2edf2e66bbb2388c825ec"
     },
     "fixed-data-table/fixed-data-table.d.ts": {
       "commit": "7de6c3dd94feaeb21f20054b9f30d5dabc5efabd"

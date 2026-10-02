@@ -2,7 +2,6 @@
   "name": "weavejs",
   "version": "0.0.0",
   "description": "Collection of visualization tools and UI for the WeaveJS project.",
-  "main": "lib/weavejs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "clean": "npm run clean:outts && npm run clean:lib && npm run clean:dist",
@@ -10,17 +9,14 @@
     "clean:lib": "rimraf lib/*.js",
     "clean:dist": "rimraf dist/*.js dist/*.css dist/*.html",
     "copy": "node run-ts copy",
-    "dts": "tsc -p tsconfig-definitions.json",
     "compile": "npm run compile-as && npm run compile-dts && npm run compile-ts && npm run copy",
     "compile-refs": "node run-ts main-import-tool -d srcts/weavejs -f srcts/_references.ts && npm run compile-librefs",
     "compile-librefs": "node run-ts main-import-tool -d typings/ -f srcts/_lib-references.ts",
     "compile-libs": "mkdirp dist/ && npm run compile-librefs && tsc -p tsconfig-libs.json && babel outts/libs.js --out-file lib/libs.js && browserifyinc --cachefile  browserifycache.json lib/libs.js > dist/libs.js",
-    "compile-module": "tsc -p tsconfig-module.json && babel outts/module.js --out-file lib/module.js",
     "compile-dts": "as2dts --defs-only ./WeaveASJS/src ./WeaveASJS/typings/src && tsc -d -p ./WeaveASJS/typings/ && mv WeaveASJS/typings/*.d.ts ./typings/weave/",
     "compile-ts": "mkdirp dist/ && npm run compile-refs && tsc -p tsconfig.json && babel outts/weavejs.js --out-file dist/weavejs.js",
     "compile-as": "node WeaveASJS/build.js",
-    "compile-weave": "cd Weave && (ant dist; status=$?; git checkout -- WeaveServices/src/weave/weave_version.txt WeaveUISpark/src/weave/weave_version.txt; exit $status)",
-    "postinstall": "cd lib || ( npm run compile && npm run compile-module && npm run dts )"
+    "compile-weave": "cd Weave && (ant dist; status=$?; git checkout -- WeaveServices/src/weave/weave_version.txt WeaveUISpark/src/weave/weave_version.txt; exit $status)"
   },
   "repository": {
     "type": "git",
@@ -39,15 +35,12 @@
     "browserify": "12.0.2",
     "fs-extra": "0.30.0",
     "glob": "7.0.6",
-    "minifyify": "7.3.3",
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
-    "tsd": "0.6.5",
     "tsort": "0.0.1"
   },
   "dependencies": {
     "as2dts": "0.2.4",
-    "babel": "6.5.2",
     "babel-cli": "6.14.0",
     "browserify-incremental": "3.1.1",
     "c3": "https://github.com/WeaveTeam/c3.git",

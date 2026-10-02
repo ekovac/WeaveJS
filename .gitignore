@@ -53,7 +53,6 @@ browserifycache.json
 
 *.iml
 
-lib-typings/
 
 # reference files
 srcts/_lib-references.ts
