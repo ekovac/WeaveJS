@@ -9,7 +9,7 @@
 	"newLine": "lf"
   },
   "exclude":[
-    "node_modules", "outts", "lib-typings", "WeaveASJS"
+    "node_modules", "outts", "lib-typings", "WeaveASJS", "Weave"
   ],
   "compileOnSave": false
 }

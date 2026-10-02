@@ -58,3 +58,7 @@ lib-typings/
 # reference files
 srcts/_lib-references.ts
 srcts/_references.ts
+
+# release packages built by build-release-package.sh
+weave-release-*.zip
+tmp/

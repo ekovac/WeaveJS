@@ -19,6 +19,7 @@
     "compile-dts": "as2dts --defs-only ./WeaveASJS/src ./WeaveASJS/typings/src && tsc -d -p ./WeaveASJS/typings/ && mv WeaveASJS/typings/*.d.ts ./typings/weave/",
     "compile-ts": "mkdirp dist/ && npm run compile-refs && tsc -p tsconfig.json && babel outts/weavejs.js --out-file dist/weavejs.js",
     "compile-as": "node WeaveASJS/build.js",
+    "compile-weave": "cd Weave && (ant dist; status=$?; git checkout -- WeaveServices/src/weave/weave_version.txt WeaveUISpark/src/weave/weave_version.txt; exit $status)",
     "postinstall": "cd lib || ( npm run compile && npm run compile-module && npm run dts )"
   },
   "repository": {

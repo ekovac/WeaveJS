@@ -1,0 +1,4 @@
+[submodule "Weave"]
+	path = Weave
+	url = ../Weave.git
+	shallow = true
