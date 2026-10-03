@@ -23,13 +23,12 @@ Known caveats:
 * The FlexJS compiler builds against Flash Player 32's `playerglobal.swc` in place of version 21, which Adobe no longer hosts.
 * At runtime the app fetches fonts from Google Fonts and map tiles from OpenStreetMap.
 * The browser console shows `<rect> attribute height: Expected length, "NaN"` errors when some charts render. These haven't been investigated.
-* The contribution and CLA process below refers to the original WeaveTeam project.
 
 ## License
 MPL-2.0
 
 ## Contributing
-If you would like to contribute to Weave, you will first need to contact us at cla@iweave.com and sign a Contributor License Agreement.
+This project is very, very stale. It was revived only to see whether it still builds, and I don't anticipate maintaining it. The original WeaveTeam project required a Contributor License Agreement; that requirement doesn't apply to this fork.
 
 ## Building
 The Flash client and Java services (Weave) are included as the `Weave` git submodule.
