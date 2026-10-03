@@ -1,7 +1,7 @@
 # WeaveJS
 Web-based Analysis and Visualization Environment for HTML5
 
-#Status of this fork
+## Status of this fork
 This is a fork of [WeaveTeam/WeaveJS](https://github.com/WeaveTeam/WeaveJS), whose development stopped in 2016. In 2026 it was revived just enough to build again with a reproducible toolchain. **That work has not been extensively tested.** Treat this as software archaeology, not a maintained product.
 
 What has been verified:
@@ -25,16 +25,16 @@ Known caveats:
 * The browser console shows `<rect> attribute height: Expected length, "NaN"` errors when some charts render. These haven't been investigated.
 * The contribution and CLA process below refers to the original WeaveTeam project.
 
-#License
+## License
 MPL-2.0
 
-#Contributing
+## Contributing
 If you would like to contribute to Weave, you will first need to contact us at cla@iweave.com and sign a Contributor License Agreement.
 
-#Building
+## Building
 The Flash client and Java services (Weave) are included as the `Weave` git submodule.
 
-```
+```sh
 git clone --recurse-submodules https://github.com/ekovac/WeaveJS.git
 cd WeaveJS
 ./scripts/bootstrap.sh     # once: installs JDK 7, Ant, Flex 4.5.1, Node 6 and FlexJS into .toolchain/, then runs npm install
@@ -47,5 +47,5 @@ cd WeaveJS
 
 `scripts/bootstrap.sh` only supports Linux x86_64. Set `WEAVE_TOOLCHAIN` to install the toolchain somewhere other than `.toolchain/`.
 
-#Developer notes
-* To debug Open Layers, use the following in node_modules/openlayers/package.json:  "browser": "dist/ol-debug.js",
+## Developer notes
+* To debug OpenLayers, set `"browser": "dist/ol-debug.js"` in `node_modules/openlayers/package.json`.
